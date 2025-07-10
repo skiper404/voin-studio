@@ -14,7 +14,7 @@ const client = new MongoClient(URL);
 
 const start = async () => {
   await client.connect();
-  const coll = client.db('voin_studio').collection('clients');
+  const coll = client.db('voin_studio').collection('contacts');
 
   app.get('/', async (req, res) => {
     res.send(`Server work's`);
