@@ -1,0 +1,31 @@
+{
+  "name": "voinstudio-client",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^2.2.0",
+    "@tailwindcss/vite": "^4.1.11",
+    "aos": "^2.3.4",
+    "axios": "^1.10.0",
+    "pinia": "^3.0.3",
+    "plyr": "^3.7.8",
+    "tailwindcss": "^4.1.11",
+    "vue": "^3.5.17",
+    "vue-plyr": "^7.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-tailwindcss": "^0.6.13",
+    "sharp": "^0.34.2",
+    "vite": "^7.0.0",
+    "vite-plugin-image-optimizer": "^2.0.2",
+    "vite-plugin-vue-devtools": "^7.7.7"
+  }
+}
