@@ -1,5 +1,4 @@
 <script setup>
-import IconChevron from "./icons/IconChevron.vue";
 import IconOffers from "./icons/IconOffers.vue";
 </script>
 

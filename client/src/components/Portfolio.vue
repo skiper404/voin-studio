@@ -1,8 +1,5 @@
 <script setup>
 import IconPortfolio from "./icons/IconPortfolio.vue";
-import ProjectOne from "./ProjectOne.vue";
-import ProjectTwo from "./ProjectTwo.vue";
-import ProjectThree from "./ProjectThree.vue";
 </script>
 
 <template>
@@ -18,10 +15,16 @@ import ProjectThree from "./ProjectThree.vue";
       <IconPortfolio />
       Портфолио
     </div>
-    <div class="z-10 mt-10 grid w-full grid-cols-1 gap-10 text-2xl">
-      <ProjectOne />
-      <ProjectTwo />
-      <ProjectThree />
+    <div class="z-10 mt-10 flex w-full flex-col items-center gap-10 text-2xl">
+      <router-link :to="{ name: 'Project1' }" class="hover:text-orange-500"
+        >Project 1</router-link
+      >
+      <router-link :to="{ name: 'Project2' }" class="hover:text-orange-500">
+        Project 2
+      </router-link>
+      <router-link :to="{ name: 'Project3' }" class="hover:text-orange-500">
+        Project 3
+      </router-link>
     </div>
   </div>
 </template>

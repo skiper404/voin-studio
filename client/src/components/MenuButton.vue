@@ -1,15 +1,9 @@
 <script setup>
-import { Bars3Icon } from "@heroicons/vue/24/outline";
+import IconMenu from "./icons/IconMenu.vue";
 </script>
 
 <template>
-  <div>
-    <div
-      class="size-10 text-blue-500 transition duration-300 hover:text-blue-500 md:hidden"
-    >
-      <Bars3Icon />
-    </div>
-  </div>
+  <IconMenu />
 </template>
 
 <style lang="scss" scoped></style>

@@ -3,7 +3,8 @@ import IconInstagram from "./icons/IconInstagram.vue";
 import IconTelegram from "./icons/IconTelegram.vue";
 import IconViber from "./icons/IconViber.vue";
 import IconContacts from "./icons/IconContacts.vue";
-import LeaveInfo from "./LeaveInfo.vue";
+import SubmitForm from "./SubmitForm.vue";
+import BaseContact from "./BaseContact.vue";
 </script>
 
 <template>
@@ -20,45 +21,23 @@ import LeaveInfo from "./LeaveInfo.vue";
       <div>Контакты</div>
     </div>
     <div class="z-10 mt-10 flex flex-col items-center gap-10 px-2 py-10">
-      <a
-        href="https://t.me/KOLYA_VOIN"
-        class="flex items-center gap-4"
-        data-aos="fade-right"
-        data-aos-duration="1000"
-        target="_blank"
-      >
+      <BaseContact href="https://t.me/KOLYA_VOIN">
         <IconTelegram />
         @KOLYA_VOIN
-      </a>
-      <a
-        href="https://www.instagram.com/kolya_voin3228/"
-        target="_blank"
-        class="flex items-center gap-4"
-        data-aos="fade-right"
-        data-aos-duration="1000"
-      >
+      </BaseContact>
+      <BaseContact href="https://www.instagram.com/kolya_voin3228/">
         <IconInstagram />
         kolya_voin3228
-      </a>
-      <a
-        href="viber://chat?number=+380951732724"
-        class="flex items-center gap-4"
-        data-aos="fade-right"
-        data-aos-duration="1000"
-      >
+      </BaseContact>
+      <BaseContact href="viber://chat?number=+380951732724">
         <IconViber />
         +380-95-173-2724
-      </a>
-      <a
-        href="tel:+380951732724"
-        class="flex items-center gap-4"
-        data-aos="fade-right"
-        data-aos-duration="1000"
-      >
+      </BaseContact>
+      <BaseContact href="tel:+380951732724">
         <IconContacts />
         +380-95-173-2724
-      </a>
-      <LeaveInfo />
+      </BaseContact>
+      <SubmitForm />
     </div>
   </div>
 </template>

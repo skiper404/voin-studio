@@ -12,7 +12,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="fixed inset-0 z-20 scroll-m-56 bg-black/90">
+  <div class="fixed inset-0 z-20 scroll-m-56 bg-black/80 backdrop-blur-xs">
     <div class="m-10">
       <NavigationMobile />
     </div>

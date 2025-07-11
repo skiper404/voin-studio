@@ -4,36 +4,50 @@ import { submitUser } from "@/services/useService";
 
 export const useMainStore = defineStore("MainStore", () => {
   const showMenu = ref(false);
-  const openMenu = () => (showMenu.value = true);
-  const closeMenu = () => (showMenu.value = false);
-
   const activeTab = ref(null);
+  const userName = ref("");
+  const userContact = ref("");
+  const message = ref("");
+
+  const openMenu = () => {
+    showMenu.value = true;
+  };
+
+  const closeMenu = () => {
+    showMenu.value = false;
+  };
 
   const setActiveTab = (tab) => {
     activeTab.value = tab;
   };
 
-  const userName = ref("");
-  const userEmail = ref("");
-  const userPhone = ref("");
-
-  const isSubmit = ref(false);
+  const resetInfo = () => {
+    userName.value = "";
+    userContact.value = "";
+  };
 
   const submit = async () => {
-    await submitUser({
-      userName: userName.value,
-      userEmail: userEmail.value,
-      userPhone: userPhone.value,
-    });
+    if (!userName.value) {
+      message.value = "Введите имя";
+      return;
+    }
 
-    userName.value = "";
-    userEmail.value = "";
-    userPhone.value = "";
-    isSubmit.value = true;
+    if (!userContact.value) {
+      message.value = "Введите email или телефон";
+      return;
+    }
+    message.value = "Заявка отправлена";
+
+    resetInfo();
 
     setTimeout(() => {
-      isSubmit.value = false;
+      message.value = "";
     }, 1000);
+
+    await submitUser({
+      userName: userName.value,
+      userContact: userContact.value,
+    });
   };
 
   return {
@@ -43,9 +57,8 @@ export const useMainStore = defineStore("MainStore", () => {
     activeTab,
     setActiveTab,
     userName,
-    userEmail,
-    userPhone,
+    userContact,
     submit,
-    isSubmit,
+    message,
   };
 });

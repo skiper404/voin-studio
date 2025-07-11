@@ -2,7 +2,6 @@
 import { useMainStore } from "./stores/MainStore";
 import Footer from "./components/Footer.vue";
 import Header from "./components/Header.vue";
-import Main from "./components/Main.vue";
 import Menu from "./components/Menu.vue";
 
 const mainStore = useMainStore();
@@ -15,7 +14,7 @@ const mainStore = useMainStore();
   >
     <Header />
     <Menu v-if="mainStore.showMenu" @click="mainStore.closeMenu" />
-    <Main />
+    <router-view></router-view>
     <Footer />
   </div>
 </template>

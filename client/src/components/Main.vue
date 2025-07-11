@@ -8,12 +8,10 @@ import SpecialOffers from "./SpecialOffers.vue";
 </script>
 
 <template>
-  <div>
-    <Home />
-    <About />
-    <Serviсes />
-    <Portfolio />
-    <SpecialOffers />
-    <Contacts />
-  </div>
+  <Home />
+  <About />
+  <Serviсes />
+  <Portfolio />
+  <SpecialOffers />
+  <Contacts />
 </template>

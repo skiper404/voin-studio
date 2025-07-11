@@ -3,7 +3,7 @@ import { useMainStore } from "@/stores/MainStore";
 import Logo from "./Logo.vue";
 import MenuButton from "./MenuButton.vue";
 import Navigation from "./Navigation.vue";
-import FastConnect from "./FastConnect.vue";
+import ContactsBar from "./ContactsBar.vue";
 
 const mainStore = useMainStore();
 </script>
@@ -15,7 +15,7 @@ const mainStore = useMainStore();
     <Logo />
     <Navigation />
     <div class="flex">
-      <FastConnect />
+      <ContactsBar />
       <MenuButton @click="mainStore.openMenu" />
     </div>
   </header>
