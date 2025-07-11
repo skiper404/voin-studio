@@ -8,6 +8,7 @@ export const useMainStore = defineStore("MainStore", () => {
   const userName = ref("");
   const userContact = ref("");
   const message = ref("");
+  const isDisableButton = ref(false);
 
   const openMenu = () => {
     showMenu.value = true;
@@ -37,6 +38,7 @@ export const useMainStore = defineStore("MainStore", () => {
       return;
     }
     message.value = "Заявка отправлена";
+    isDisableButton.value = true;
 
     await submitUser({
       userName: userName.value,
@@ -47,7 +49,8 @@ export const useMainStore = defineStore("MainStore", () => {
 
     setTimeout(() => {
       message.value = "";
-    }, 1000);
+      isDisableButton.value = false;
+    }, 3000);
   };
 
   return {
@@ -60,5 +63,6 @@ export const useMainStore = defineStore("MainStore", () => {
     userContact,
     submit,
     message,
+    isDisableButton,
   };
 });

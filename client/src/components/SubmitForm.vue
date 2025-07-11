@@ -39,7 +39,7 @@ const mainStore = useMainStore();
     <button
       type="submit"
       class="h-10 bg-gray-600 text-green-500 hover:bg-gray-500"
-      @click="mainStore.submit"
+      :disabled="mainStore.isDisableButton"
     >
       Отправить
     </button>
