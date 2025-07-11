@@ -38,16 +38,16 @@ export const useMainStore = defineStore("MainStore", () => {
     }
     message.value = "Заявка отправлена";
 
+    await submitUser({
+      userName: userName.value,
+      userContact: userContact.value,
+    });
+
     resetInfo();
 
     setTimeout(() => {
       message.value = "";
     }, 1000);
-
-    await submitUser({
-      userName: userName.value,
-      userContact: userContact.value,
-    });
   };
 
   return {

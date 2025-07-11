@@ -22,7 +22,6 @@ const mainStore = useMainStore();
         class="w-full bg-gray-600 p-2 outline-0"
         placeholder="Игорь"
         v-model="mainStore.userName"
-        required
       />
     </div>
     <div class="flex flex-col items-center justify-between gap-2">
@@ -35,7 +34,6 @@ const mainStore = useMainStore();
         class="w-full bg-gray-600 p-2 outline-0"
         placeholder="+380951234567"
         v-model="mainStore.userContact"
-        required
       />
     </div>
     <button
