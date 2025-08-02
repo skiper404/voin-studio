@@ -10,7 +10,7 @@ import IconLogo from "./icons/IconLogo.vue";
     >
       <IconLogo />
       <div class="whitespace-nowrap text-white">
-        <span> VOIN </span>
+        <span> Voin </span>
         <span class="text-red-500">S</span>
         <span class="text-orange-500">t</span>
         <span class="text-yellow-500">u</span>

@@ -10,10 +10,12 @@ import IconSmile from "./icons/IconSmile.vue";
     class="flex flex-col items-center gap-10 text-5xl sm:text-6xl md:flex-row"
   >
     <div class="flex">
-      <span>V</span>
-      <IconSmile class="relative -top-2" />
       <span>I</span>
-      <span>N</span>
+      <span>G</span>
+      <IconSmile class="relative -top-2" />
+      <span>R</span>
+      <span>E</span>
+      <span>K</span>
     </div>
     <div class="flex">
       <span class="text-red-500">S</span>
